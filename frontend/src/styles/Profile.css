@@ -1,0 +1,28 @@
+.profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    background-color: #f5f7fb;
+}
+
+.profile-card {
+    width: 450px;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
+}
+
+.profile-card h1 {
+    text-align: center;
+    color: #1976d2;
+    margin-bottom: 25px;
+}
+
+.profile-item {
+    font-size: 18px;
+    margin: 15px 0;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
