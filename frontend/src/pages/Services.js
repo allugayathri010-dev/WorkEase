@@ -1,16 +1,25 @@
 import "../styles/Home.css";
 import ServiceCard from "../components/ServiceCard";
+
 function Services() {
   return (
-    <div>
+    <div className="services-page">
+
       <div className="services-header">
-      <h1>Services Page</h1>
-      <p>choose the service you need</p>
+        <h1>Our Services</h1>
+        <p>
+          Choose a service and book a trusted professional
+          at your convenience.
+        </p>
       </div>
+
       <div className="services-container">
-      <ServiceCard
+
+        <ServiceCard
           icon="🧹"
           title="Home Cleaning"
+          description="Professional cleaning services to keep your home fresh and spotless."
+          price="Starting from ₹499"
           services={[
             "Bathroom Cleaning",
             "Kitchen Cleaning",
@@ -19,33 +28,40 @@ function Services() {
             "Full House Cleaning"
           ]}
         />
-      
+
         <ServiceCard
-        icon="🎨"
+          icon="🎨"
           title="Painting"
+          description="Give your home a fresh new look with professional painting services."
+          price="Starting from ₹1,499"
           services={[
             "Interior Painting",
             "Exterior Painting",
             "Rental Painting",
             "Waterproofing",
-            "wall Texture Painting"
+            "Wall Texture Painting"
           ]}
         />
+
         <ServiceCard
-        icon="🚚"
+          icon="🚚"
           title="Packers & Movers"
+          description="Reliable moving services for homes, offices and vehicles."
+          price="Starting from ₹2,499"
           services={[
             "Within City",
             "Between Cities",
             "Vehicle Shifting",
-            "vehicle Transportation",
-              "Office Relocation"
+            "Vehicle Transportation",
+            "Office Relocation"
           ]}
         />
-      
+
         <ServiceCard
           icon="❄️"
           title="AC & Appliances"
+          description="Professional repair and maintenance for your home appliances."
+          price="Starting from ₹499"
           services={[
             "AC Service",
             "Washing Machine Repair",
@@ -54,55 +70,63 @@ function Services() {
             "Microwave Repair"
           ]}
         />
-      
+
         <ServiceCard
           icon="🔧"
           title="Plumbing"
+          description="Quick and reliable solutions for plumbing repairs and installations."
+          price="Starting from ₹399"
           services={[
             "Pipe Repair",
             "Tap Installation",
             "Leakage Repair",
-            "water Tank Installation",
+            "Water Tank Installation",
             "Bathroom Fitting"
           ]}
         />
-      
+
         <ServiceCard
-        icon="💡"
+          icon="💡"
           title="Electrician"
+          description="Professional electrical repair, installation and maintenance services."
+          price="Starting from ₹299"
           services={[
             "Fan Repair",
-            "Switch & socket Repair",
+            "Switch & Socket Repair",
             "Wiring",
             "Inverter Installation",
             "Appliance Installation"
           ]}
         />
-      
+
         <ServiceCard
           icon="🪚"
           title="Carpentry"
+          description="Expert carpentry services for furniture, doors and other woodwork."
+          price="Starting from ₹399"
           services={[
             "Furniture Assembly",
             "Door & Window Repair",
             "Wood Work",
             "Cupboard Installation",
-              "Furniture Polishing"
+            "Furniture Polishing"
           ]}
         />
-      
+
         <ServiceCard
           icon="🛠️"
           title="Other Services"
+          description="Convenient solutions for other home and office service requirements."
+          price="Starting from ₹299"
           services={[
             "TV Mounting",
             "Wall Hanging",
             "Office Cleaning",
             "Maid Service",
-            "wall panelling"
+            "Wall Panelling"
           ]}
         />
-      
+
       </div>
     </div>
   );

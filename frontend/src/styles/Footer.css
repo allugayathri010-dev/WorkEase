@@ -1,15 +1,26 @@
 .footer {
-    background-color: #2563EB;
-    color: white;
-    text-align: center;
-    padding: 30px;
-    margin-top: 50px;
+  background-color: #0F3D56;
+
+  color: #FFFFFF;
+
+  text-align: center;
+
+  padding: 40px 20px;
+
+  margin-top: 60px;
 }
 
 .footer h2 {
-    margin-bottom: 10px;
+  margin-bottom: 12px;
+
+  font-size: 28px;
+  font-weight: 700;
 }
 
 .footer p {
-    margin: 8px 0;
+  margin: 8px 0;
+
+  color: #E8F1F5;
+
+  font-size: 15px;
 }

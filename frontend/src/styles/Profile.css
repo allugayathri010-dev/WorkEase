@@ -1,28 +1,255 @@
-.profile-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 80vh;
-    background-color: #f5f7fb;
+.profile-page {
+  min-height: calc(100vh - 72px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 20px;
+  background-color: #f5f8fa;
+  box-sizing: border-box;
 }
 
 .profile-card {
-    width: 450px;
-    background: white;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 600px;
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  box-sizing: border-box;
 }
 
-.profile-card h1 {
-    text-align: center;
-    color: #1976d2;
-    margin-bottom: 25px;
+/* Profile Header */
+
+.profile-header {
+  text-align: center;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #e5e7eb;
+  margin-bottom: 30px;
 }
 
-.profile-item {
-    font-size: 18px;
-    margin: 15px 0;
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
+.profile-avatar {
+  width: 90px;
+  height: 90px;
+  margin: 0 auto 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: #0f3d56;
+  color: #ffffff;
+  font-size: 38px;
+  font-weight: 700;
+}
+
+.profile-header h1 {
+  margin: 0 0 8px;
+  color: #0f3d56;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.profile-header p {
+  margin: 0;
+  color: #666666;
+  font-size: 15px;
+}
+
+/* Profile Details */
+
+.profile-details {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.profile-detail {
+  padding: 16px 18px;
+  background-color: #f8fafc;
+  border: 1px solid #e5e7eb;
+  border-radius: 9px;
+}
+
+.profile-detail span {
+  display: block;
+  margin-bottom: 6px;
+  color: #777777;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.profile-detail strong {
+  color: #222222;
+  font-size: 16px;
+  font-weight: 600;
+  word-break: break-word;
+}
+
+/* Edit Button */
+
+.profile-edit-button {
+  width: 100%;
+  margin-top: 28px;
+  padding: 13px;
+  border: none;
+  border-radius: 8px;
+  background-color: #1565c0;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.profile-edit-button:hover {
+  background-color: #0d47a1;
+  transform: translateY(-1px);
+}
+
+/* Edit Form */
+
+.profile-form-group {
+  margin-bottom: 20px;
+}
+
+.profile-form-group label {
+  display: block;
+  margin-bottom: 7px;
+  color: #333333;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.profile-form-group input {
+  width: 100%;
+  padding: 12px 14px;
+  box-sizing: border-box;
+  border: 1px solid #d1d5db;
+  border-radius: 7px;
+  outline: none;
+  font-size: 15px;
+  color: #333333;
+  transition: border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.profile-form-group input:focus {
+  border-color: #1565c0;
+  box-shadow: 0 0 0 3px rgba(21, 101, 192, 0.12);
+}
+
+.profile-form-group input:disabled {
+  background-color: #f1f3f5;
+  color: #777777;
+  cursor: not-allowed;
+}
+
+/* Action Buttons */
+
+.profile-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.profile-save-button,
+.profile-cancel-button {
+  flex: 1;
+  padding: 12px;
+  border-radius: 7px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.profile-save-button {
+  border: none;
+  background-color: #1565c0;
+  color: #ffffff;
+}
+
+.profile-save-button:hover {
+  background-color: #0d47a1;
+  transform: translateY(-1px);
+}
+
+.profile-cancel-button {
+  border: 1px solid #d1d5db;
+  background-color: #ffffff;
+  color: #444444;
+}
+
+.profile-cancel-button:hover {
+  background-color: #f5f5f5;
+}
+
+/* Messages */
+
+.profile-message {
+  margin: 18px 0 0;
+  padding: 10px;
+  border-radius: 6px;
+  background-color: #e8f5e9;
+  color: #2e7d32;
+  text-align: center;
+  font-size: 14px;
+}
+
+/* Login Required */
+
+.profile-card h2 {
+  margin: 0 0 10px;
+  color: #0f3d56;
+  text-align: center;
+}
+
+.profile-card > p {
+  color: #666666;
+  text-align: center;
+}
+
+.profile-card > button {
+  display: block;
+  width: 100%;
+  margin-top: 25px;
+  padding: 13px;
+  border: none;
+  border-radius: 8px;
+  background-color: #1565c0;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.profile-card > button:hover {
+  background-color: #0d47a1;
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .profile-page {
+    padding: 30px 15px;
+  }
+
+  .profile-card {
+    padding: 30px 22px;
+  }
+
+  .profile-header h1 {
+    font-size: 24px;
+  }
+
+  .profile-avatar {
+    width: 75px;
+    height: 75px;
+    font-size: 32px;
+  }
+
+  .profile-actions {
+    flex-direction: column;
+  }
 }

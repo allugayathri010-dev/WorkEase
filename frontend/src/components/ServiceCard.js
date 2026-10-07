@@ -1,19 +1,49 @@
 import "../styles/ServiceCard.css";
-import {Link} from "react-router-dom";
-export default function ServiceCard({icon,title,services}) {
-    return (
-        <div className="service-card">
-            <div className="service-icon">{icon}</div>
-            <h3>{title}</h3>
-            {services.map((service, index)=>(
-                <p key={index}>{service}</p>
-            ))}
+import { Link } from "react-router-dom";
 
-            <Link to="/booking">
-  <button className="book-button">
-    Book Service
-  </button>
-</Link>
-        </div>
-    );
+export default function ServiceCard({
+  icon,
+  title,
+  description,
+  price,
+  services
+}) {
+  return (
+    <div className="service-card">
+
+      <div className="service-icon">
+        {icon}
+      </div>
+
+      <h3>{title}</h3>
+
+      <p className="service-description">
+        {description}
+      </p>
+
+      <div className="service-price">
+        {price}
+      </div>
+
+      <div className="service-list">
+        {services.map((service, index) => (
+          <p key={index}>
+            <span>✓</span>
+            {service}
+          </p>
+        ))}
+      </div>
+
+      <Link
+        to="/booking"
+        state={{ service: title }}
+        className="book-link"
+      >
+        <button className="book-button">
+          Book Service
+        </button>
+      </Link>
+
+    </div>
+  );
 }
